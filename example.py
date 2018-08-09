@@ -1,4 +1,4 @@
-from pesapal import PesaPal
+from pesapal.pesapal import PesaPal
 
 consumer_key = 'xxxxxxxxxx'
 consumer_secret = 'xxxxxxxx'

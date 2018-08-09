@@ -1,27 +1,26 @@
-from setuptools import setup
+import setuptools
 
-def readme():
-    with open('readme.md') as f:
-        return f.read()
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-setup(
-  name = 'pesapal',
-  version = '1.0',
-  description = 'A module to interact with PesaPal REST apis, www.pesapal.com',
-  long_description = readme(),
-  author = 'Abdu Ssekalala',
-  author_email = 'assekalala@gmail.com',
-  url = 'https://github.com/assekalala/pesapal-python.git',
-  keywords = ['pesapal', 'payments'],
-  py_modules = ['pesapal'],
-  classifiers = [
-        "Programming Language :: Python",
+setuptools.setup(
+    name="pesapal",
+    version="0.0.1",
+    author="Abdu Ssekalala",
+    author_email="assekalala@gmail.com",
+    description="A module to interact with PesaPal REST apis, www.pesapal.com",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/assekalala/pesapal-python",
+    packages=setuptools.find_packages(),
+    install_requires=[
+      'natsort',
+      'pycurl',
+      'pyopenssl',
+    ]
+    classifiers=(
         "Programming Language :: Python :: 3",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: Apache Software License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Communications",
-        "Development Status :: 1 - Beta"
-  ],
+    ),
 )
